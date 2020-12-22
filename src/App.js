@@ -1,12 +1,17 @@
+import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import store from './store/taskSlice';
 
-import './App.css';
+import InboxScreen from './components/InboxScreen';
 
-function App() {
-  return (
-    <div className="App">
-     <h1>Hello World</h1>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <InboxScreen />
+      </Provider>
+    );
+  }
 }
 
 export default App;
